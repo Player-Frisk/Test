@@ -41,7 +41,7 @@ Secrt.TextColor3 = Color3.new(1, 0, 0)
 Secrt.TextSize = 14
 
 mouse.KeyDown:connect(function(key)
-if MainFrame.Visible == OpenMenu then
+if key == OpenMenu then
     if opens == true then 
     MainFrame:TweenPosition(UDim2.new(0.384,0,-1,0), 'Out', 'Elastic', 3)
     MainFrame.Visible = false
