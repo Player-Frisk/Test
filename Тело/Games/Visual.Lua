@@ -20,7 +20,7 @@ MainFrame.BorderSizePixel = 0
 MainFrame.Draggable = true
 MainFrame.Position = UDim2.new(0.339118838, 0, 0.0474308431, 0)
 MainFrame.Size = UDim2.new(0, 564, 0, 304)
-MainFrame.Visible = false
+MainFrame.Visible = true
 Tittle.Name = "Tittle"
 Tittle.Parent = MainFrame
 Tittle.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
@@ -42,7 +42,7 @@ Secrt.TextSize = 14
 
 mouse.KeyDown:connect(function(key)
 if key == OpenMenu then
-    if opens == true then 
+    if MainFrame.Visible == true then 
     MainFrame:TweenPosition(UDim2.new(0.384,0,-1,0), 'Out', 'Elastic', 3)
     MainFrame.Visible = false
     end
